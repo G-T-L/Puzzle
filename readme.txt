@@ -1,9 +1,5 @@
-How to use
-bwperim--->extract edge
-regionprops--->img_edge_reg
+一个依据拼图块自身邻接性的智能拼图算法
 
-pixelGroups_edge=divisionByCorner(img_edge_reg);
-mappingdata=calcMappingdata(img_edge_reg,img_edge,pixelGroups_edge);
-allocationMatrix = calcRegionAllocation(mappingdata);
-img_splice = generateSplicingImg(src,img_reg,pixelGroups_edge,allocationMatrix);
-figure;imshow(img_splice);
+可以通过调整程序的特征值与相关系数算法及启发式算法中的遍历优先值评估算法来改善调整程序的行为,并可选输入相关的先验知识提升性能
+
+提取出各个拼图块,计算其每个拼图块各边缘之间的相关性,使用启发式算法找出拼接的最优解
